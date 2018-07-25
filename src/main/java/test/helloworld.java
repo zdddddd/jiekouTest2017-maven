@@ -55,7 +55,7 @@ public class helloworld {
 		// 调用方法基础
 		print("hello test");
 		// 调用外部其他包的方法
-		test2.t();
+		//test2.t();
 
 		
 		// 静态 static 与 new创建对象
