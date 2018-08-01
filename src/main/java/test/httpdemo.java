@@ -27,9 +27,15 @@ public class httpdemo {
 		// 获取状态码，此处会真实发送数据
 		int code = httpURLConnection.getResponseCode();
 		System.out.println(code);
+		//从header中获取数据
+		//httpURLConnection.getHeaderField("name");
+		//获取
+		//httpURLConnection.getHeaderFields().get("name");
 		// 获取网络数据流
 		InputStream inputStream = httpURLConnection.getInputStream();
 		InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
+		//自动根据头信息中的编码方式修改，httpURLConnection.getContentEncoding()有可能取到空值，所以最好先判断。
+		//InputStreamReader inputStreamReader = new InputStreamReader(inputStream, httpURLConnection.getContentEncoding());
 		BufferedReader reader = new BufferedReader(inputStreamReader);
 		// 逐行读取转换为字符串，直到读不到为止
 		String tempLine = null;
