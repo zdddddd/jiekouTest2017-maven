@@ -3,7 +3,6 @@ package test;
 import java.io.File;
 import java.util.*;
 
-import com.sun.java.util.jar.pack.Package;
 import org.apache.http.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
@@ -132,7 +131,7 @@ public class httpclientTest {
 		MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
 		if(maps!=null){
 			for (String key :maps.keySet()){
-				multipartEntityBuilder.addPart(key,new StringBody(maps.get(key),ContentType.TEXT_PLAIN))
+				multipartEntityBuilder.addPart(key,new StringBody(maps.get(key),ContentType.TEXT_PLAIN));
 			}
 		}
 		if (fileLists!=null){
