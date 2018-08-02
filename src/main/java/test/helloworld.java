@@ -21,15 +21,15 @@ public class helloworld {
 		// hello world
 		System.out.println("Hello world!");
 
-		// »ù´¡Êı¾İÀàĞÍ
+		// åŸºç¡€æ•°æ®ç±»å‹
 		int i = 0;
 		String string = "test";
 		byte b = 35;
 		byte b2 = 0x23;
 		byte[] bs = new byte[] { 36, 37 };
 
-		// ¼¯ºÏÀàĞÍ
-		// ListÓĞĞòÇÒÔÊĞíÔªËØÖØ¸´
+		// é›†åˆç±»å‹
+		// Listæœ‰åºä¸”å…è®¸å…ƒç´ é‡å¤
 		List<String> list = new ArrayList<String>();
 		list.add("test1");
 		list.add("test2");
@@ -37,18 +37,18 @@ public class helloworld {
 		list.add("test4");
 		list.remove("test2");
 
-		// Set²»ÔÊĞíÔªËØÖØ¸´
+		// Setä¸å…è®¸å…ƒç´ é‡å¤
 		Set set = new HashSet();
 		set.add("test1");
 		set.add("test2");
 		set.remove("test2");
 
-		// MapÊ¹ÓÃkey-valueÄ£Ê½,key²»¿ÉÖØ¸´
+		// Mapä½¿ç”¨key-valueæ¨¡å¼,keyä¸å¯é‡å¤
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("test", "value");
 		map.remove("test");
 
-		// Ìõ¼şÅĞ¶Ï¡¢Ñ­»·
+		// æ¡ä»¶åˆ¤æ–­ã€å¾ªç¯
 		if (i > 0) {
 			System.out.println("Hello if");
 		} else {
@@ -61,15 +61,15 @@ public class helloworld {
 			System.out.println(tmp);
 		}
 
-		
-		// µ÷ÓÃ·½·¨»ù´¡
+
+		// è°ƒç”¨æ–¹æ³•åŸºç¡€
 		print("hello test");
-		// µ÷ÓÃÍâ²¿ÆäËû°üµÄ·½·¨
+		// è°ƒç”¨å¤–éƒ¨å…¶ä»–åŒ…çš„æ–¹æ³•
 		//test2.t();
 
-		
-		// ¾²Ì¬ static Óë new´´½¨¶ÔÏó
-		
+
+		// é™æ€ static ä¸ newåˆ›å»ºå¯¹è±¡
+
 
 		String url = "http://127.0.0.1:9999/";
 		String body = "test=1234";
@@ -79,13 +79,13 @@ public class helloworld {
 		maptest.put("test2", "5678");
 
 		// httpdemo
-		//ÉèÖÃ´úÀí£¨È«¾ÖµÄ£©(HttpURLConnectionÀïÉúĞ§)
+		//è®¾ç½®ä»£ç†ï¼ˆå…¨å±€çš„ï¼‰(HttpURLConnectioné‡Œç”Ÿæ•ˆ)
 		//System.setProperty("http.proxyHost","127.0.0.1");
 //		System.setProperty("http.proxyPort","8888");
-	//ÉèÖÃcookie,×Ô¶¯Ìí¼Ócookie
+		//è®¾ç½®cookie,è‡ªåŠ¨æ·»åŠ cookie
 		//CookieHandler.setDefault(new CookieManager(null,CookiePolicy.ACCEPT_ALL));
-        //ÉèÖÃÊÇ·ñÔÊĞíÌø×ª
-        //HttpURLConnection.setFollowRedirects(false);
+		//è®¾ç½®æ˜¯å¦å…è®¸è·³è½¬
+		//HttpURLConnection.setFollowRedirects(false);
 		print("httpdemo");
 		httpdemo.onlyGet(url);
 

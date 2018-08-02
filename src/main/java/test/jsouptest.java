@@ -16,7 +16,7 @@ public class jsouptest {
 	
 	public static String Get(String url) throws Exception {
 		Document document = Jsoup.connect(url)
-				.proxy("127.0.0.1", 9999)
+				//.proxy("127.0.0.1", 9999)
 				.get();
 		// System.out.println(document.toString());
 		return document.toString();
@@ -24,7 +24,7 @@ public class jsouptest {
 	
 	public static String Get(String url, Map<String, String> data) throws Exception {
 		Connection conn = Jsoup.connect(url);
-		conn.proxy("127.0.0.1", 9999);
+		//conn.proxy("127.0.0.1", 9999);
 		conn.data(data);
 		conn.method(Method.GET);
 		Response response = conn.execute();
@@ -34,7 +34,7 @@ public class jsouptest {
 	
 	public static String Post(String url, Map<String, String> data) throws Exception {
 		Connection conn = Jsoup.connect(url);
-		conn.proxy("127.0.0.1", 9999);
+		//conn.proxy("127.0.0.1", 9999);
 		conn.data(data);
 		conn.cookies(cookie); //设置cookie
 		Document document = conn.post();

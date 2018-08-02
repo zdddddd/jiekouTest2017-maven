@@ -10,40 +10,40 @@ public class httpdemo {
 		URL realUrl = new URL(url);
 		URLConnection conn = realUrl.openConnection();
 		HttpURLConnection httpURLConnection = ((HttpURLConnection) conn);
-	    //httpURLConnection.connect();
-	    httpURLConnection.getResponseCode();
+		//httpURLConnection.connect();
+		httpURLConnection.getResponseCode();
 	}
 
 	public static String httpGet(String url) throws Exception {
-		// ÏòÖ¸¶¨URL·¢ËÍGET·½·¨µÄÇëÇó
+		// å‘æŒ‡å®šURLå‘é€GETæ–¹æ³•çš„è¯·æ±‚
 		URL realUrl = new URL(url);
 		URLConnection conn = realUrl.openConnection();
-		// ¶ÔÏó×ª»»£¬ºóĞøĞèÒª
+		// å¯¹è±¡è½¬æ¢ï¼Œåç»­éœ€è¦
 		HttpURLConnection httpURLConnection = ((HttpURLConnection) conn);
-		// ÉèÖÃÇëÇóÍ·ÊôĞÔ
+		// è®¾ç½®è¯·æ±‚å¤´å±æ€§
 		httpURLConnection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)");
-		// ½¨Á¢Êµ¼ÊµÄÁ¬½Ó
+		// å»ºç«‹å®é™…çš„è¿æ¥
 		httpURLConnection.connect();
-		// »ñÈ¡×´Ì¬Âë£¬´Ë´¦»áÕæÊµ·¢ËÍÊı¾İ
+		// è·å–çŠ¶æ€ç ï¼Œæ­¤å¤„ä¼šçœŸå®å‘é€æ•°æ®
 		int code = httpURLConnection.getResponseCode();
 		System.out.println(code);
-		//´ÓheaderÖĞ»ñÈ¡Êı¾İ
+		//ä»headerä¸­è·å–æ•°æ®
 		//httpURLConnection.getHeaderField("name");
-		//»ñÈ¡
+		//è·å–
 		//httpURLConnection.getHeaderFields().get("name");
-		// »ñÈ¡ÍøÂçÊı¾İÁ÷
+		// è·å–ç½‘ç»œæ•°æ®æµ
 		InputStream inputStream = httpURLConnection.getInputStream();
 		InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
-		//×Ô¶¯¸ù¾İÍ·ĞÅÏ¢ÖĞµÄ±àÂë·½Ê½ĞŞ¸Ä£¬httpURLConnection.getContentEncoding()ÓĞ¿ÉÄÜÈ¡µ½¿ÕÖµ£¬ËùÒÔ×îºÃÏÈÅĞ¶Ï¡£
+		//è‡ªåŠ¨æ ¹æ®å¤´ä¿¡æ¯ä¸­çš„ç¼–ç æ–¹å¼ä¿®æ”¹ï¼ŒhttpURLConnection.getContentEncoding()æœ‰å¯èƒ½å–åˆ°ç©ºå€¼ï¼Œæ‰€ä»¥æœ€å¥½å…ˆåˆ¤æ–­ã€‚
 		//InputStreamReader inputStreamReader = new InputStreamReader(inputStream, httpURLConnection.getContentEncoding());
 		BufferedReader reader = new BufferedReader(inputStreamReader);
-		// ÖğĞĞ¶ÁÈ¡×ª»»Îª×Ö·û´®£¬Ö±µ½¶Á²»µ½ÎªÖ¹
+		// é€è¡Œè¯»å–è½¬æ¢ä¸ºå­—ç¬¦ä¸²ï¼Œç›´åˆ°è¯»ä¸åˆ°ä¸ºæ­¢
 		String tempLine = null;
 		StringBuffer resultBuffer = new StringBuffer();
 		while ((tempLine = reader.readLine()) != null) {
 			resultBuffer.append(tempLine + '\n');
 		}
-		// ¹Ø±Õ¶ÔÏó
+		// å…³é—­å¯¹è±¡
 		reader.close();
 		inputStreamReader.close();
 		inputStream.close();
@@ -61,7 +61,7 @@ public class httpdemo {
 		httpURLConnection.setRequestMethod("POST");
 		httpURLConnection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)");
 		//httpURLConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-		
+
 		OutputStream outputStream = httpURLConnection.getOutputStream();
 		OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream, "UTF-8");
 		outputStreamWriter.write(parameterData.toString());
@@ -69,17 +69,17 @@ public class httpdemo {
 
 		int code = httpURLConnection.getResponseCode();
 		System.out.println(code);
-		// »ñÈ¡ÍøÂçÊı¾İÁ÷
+		// è·å–ç½‘ç»œæ•°æ®æµ
 		InputStream inputStream = httpURLConnection.getInputStream();
 		InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
 		BufferedReader reader = new BufferedReader(inputStreamReader);
-		// ÖğĞĞ¶ÁÈ¡×ª»»Îª×Ö·û´®£¬Ö±µ½¶Á²»µ½ÎªÖ¹
+		// é€è¡Œè¯»å–è½¬æ¢ä¸ºå­—ç¬¦ä¸²ï¼Œç›´åˆ°è¯»ä¸åˆ°ä¸ºæ­¢
 		String tempLine = null;
 		StringBuffer resultBuffer = new StringBuffer();
 		while ((tempLine = reader.readLine()) != null) {
 			resultBuffer.append(tempLine + '\n');
 		}
-		// ¹Ø±Õ¶ÔÏó
+		// å…³é—­å¯¹è±¡
 		reader.close();
 		inputStreamReader.close();
 		inputStream.close();
