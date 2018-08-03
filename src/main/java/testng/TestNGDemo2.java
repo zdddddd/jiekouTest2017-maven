@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import test.httpFluent;
+import testHttpClient.httpFluent;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,7 +33,7 @@ public class TestNGDemo2 {
     @DataProvider
     public Object[][] data1(){
         return new Object[][]{
-                new Object[]{"test","已经存在"},
+                new Object[]{"testHttpClient","已经存在"},
                 new Object[]{"admin","已经存在"},
         };
     }

@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.sql.*;
 
 public class TestNGDemo1 {
@@ -19,8 +18,8 @@ public class TestNGDemo1 {
         //forName静态方法用来加载数据库驱动程序
         Class.forName(driver);
 
-        String url = "jdbc:mysql://192.168.10.100:3306/test";
-        String username = "test";
+        String url = "jdbc:mysql://192.168.10.100:3306/testHttpClient";
+        String username = "testHttpClient";
         String password = "123456";
 
         //getConnection()方法中的参数制定访问的数据库类型及名称

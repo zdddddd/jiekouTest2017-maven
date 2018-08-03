@@ -98,7 +98,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.10</version>
-            <!--<scope>test</scope>-->
+            <!--<scope>testHttpClient</scope>-->
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java -->
         <dependency>
