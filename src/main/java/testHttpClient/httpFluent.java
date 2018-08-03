@@ -1,4 +1,4 @@
-package test;
+package testHttpClient;
 
 import java.util.Map;
 
@@ -16,7 +16,7 @@ public class httpFluent {
 	public static String Post(String url, String body) throws Exception {
 		return Request.Post(url)
 			.bodyString(body, ContentType.parse("application/x-www-form-urlencoded"))
-			.addHeader("test", "header")
+			.addHeader("testHttpClient", "header")
 			.addHeader("test2", "header2")
 			.execute()
 			.returnContent()

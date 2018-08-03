@@ -1,4 +1,4 @@
-package jsoup;
+package testHttpClient;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

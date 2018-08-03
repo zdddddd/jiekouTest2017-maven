@@ -1,10 +1,9 @@
-package test;
+package testHttpClient;
 
 import java.io.File;
 import java.util.*;
 
 import org.apache.http.*;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.*;

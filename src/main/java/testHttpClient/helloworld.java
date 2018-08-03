@@ -1,15 +1,10 @@
-package test;
+package testHttpClient;
 
-import jsoup.JsoupTest;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.testng.annotations.Test;
 
-import java.net.CookieHandler;
-import java.net.CookieManager;
-import java.net.CookiePolicy;
-import java.net.HttpURLConnection;
 import java.util.*;
 
 
@@ -23,7 +18,7 @@ public class helloworld {
 
 		// 基础数据类型
 		int i = 0;
-		String string = "test";
+		String string = "testHttpClient";
 		byte b = 35;
 		byte b2 = 0x23;
 		byte[] bs = new byte[] { 36, 37 };
@@ -45,8 +40,8 @@ public class helloworld {
 
 		// Map使用key-value模式,key不可重复
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("test", "value");
-		map.remove("test");
+		map.put("testHttpClient", "value");
+		map.remove("testHttpClient");
 
 		// 条件判断、循环
 		if (i > 0) {
@@ -63,7 +58,7 @@ public class helloworld {
 
 
 		// 调用方法基础
-		print("hello test");
+		print("hello testHttpClient");
 		// 调用外部其他包的方法
 		//test2.t();
 
@@ -72,7 +67,7 @@ public class helloworld {
 
 
 		String url = "http://127.0.0.1:9999/";
-		String body = "test=1234";
+		String body = "testHttpClient=1234";
 
 		Map<String, String> maptest = new HashMap<String, String>();
 		maptest.put("test1", "1234");
