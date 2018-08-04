@@ -47,6 +47,9 @@ public class LoginTest {
                 .field("RememberMe","false")
                 .asString();
 
+        //提交json的,如果header有要求的话
+        //Unirest.post(loginUrl).header("Content-Type","application/json").field("参数名"，"json字符串");
+
         HashMap<String, String> indexHeaderMap = new HashMap<String, String>();
         indexHeaderMap.put("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
         indexHeaderMap.put("Accept-Language","zh-CN,zh;q=0.9");
@@ -63,5 +66,23 @@ public class LoginTest {
         Assert.assertEquals(loginTag,"My account");
 
 
+    }
+
+    @Test
+    public void test2(){
+        System.out.println(222);
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    public void test3(){
+        System.out.println(333);
+        Assert.assertTrue(false);
+    }
+
+    @Test
+    public void test4(){
+        System.out.println(444);
+        Assert.assertTrue(false);
     }
 }

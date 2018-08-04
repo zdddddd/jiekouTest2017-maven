@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test verbose="2" preserve-order="true" name="jiekouTest2017-maven">
+    <classes>
+      <class name="testNopCommerce.LoginTest">
+        <methods>
+          <!--执行这些-->
+          <include name="loginWithValidUser"/>
+          <include name="test2"/>
+          <!--<include name="test3"/>-->
+          <!--不执行这些-->
+          <exclude name="test4"/>
+        </methods>
+      </class> <!-- TestNGDemo2 -->
+    </classes>
+  </test> <!-- jiekouTest2017-maven -->
+</suite> <!-- Default Suite -->
